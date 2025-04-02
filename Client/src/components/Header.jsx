@@ -39,7 +39,7 @@ export const Header = () => {
         <div className="flex items-center mx-auto md:mx-0">
           <div className="text-blue-500 font-bold flex items-center">
             <img
-              src="/src/assets/logo.png"
+              src="https://i.imghippo.com/files/nUf7157RC.png"
               alt="Logo"
               width={40}
               className="object-contain mr-3"

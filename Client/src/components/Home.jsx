@@ -17,7 +17,7 @@ export const Home = () => {
             <div 
               className="absolute inset-0 bg-black/60 z-0 w-full"
               style={{ 
-                backgroundImage: "url('/src/assets/background2.png')",
+                backgroundImage: "url('https://i.imghippo.com/files/SCJ8190pV.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

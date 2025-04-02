@@ -7,7 +7,7 @@ export const MenuBanner = () => {
         <div
           className="absolute inset-0 bg-black/70 z-0 w-full"
           style={{
-            backgroundImage: "url('/src/assets/background.jpg')",
+            backgroundImage: "url('https://i.imghippo.com/files/ars6555ZQ.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

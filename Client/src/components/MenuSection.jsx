@@ -126,7 +126,7 @@ export const MenuSection = ({
         >
           <div className="absolute -top-12 sm:-top-20 -left-8 sm:-left-26">
             <img
-              src="/src/assets/drink2.png"
+              src="https://i.imghippo.com/files/Crk1476UIs.png"
               alt="Cocktail"
               width={80}
               height={110}
@@ -136,7 +136,7 @@ export const MenuSection = ({
 
           <div className="absolute -bottom-2 sm:-bottom-5 -right-4 sm:-right-12">
             <img
-              src="/src/assets/drink1.png"
+              src="https://i.imghippo.com/files/pHPR2904es.png"
               alt="Cocktail"
               width={80}
               height={110}

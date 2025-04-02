@@ -1,4 +1,4 @@
-require("dotenv").config(); // Ensure environment variables are loaded
+require("dotenv").config(); 
 
 const mongoose = require("mongoose");
 
@@ -7,7 +7,7 @@ const connectMongoDb = async () => {
 
     if (!mongoUri) {
         console.error("❌ MONGO_URL is missing in .env file!");
-        process.exit(1); // Stop the app if no MongoDB URI
+        process.exit(1); 
     }
 
     await mongoose.connect(mongoUri, {})
@@ -16,7 +16,7 @@ const connectMongoDb = async () => {
         })
         .catch((err) => {
             console.error("❌ MongoDB Connection Error:", err);
-            process.exit(1); // Exit on failure
+            process.exit(1); 
         });
 };
 

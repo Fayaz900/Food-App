@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { SERVER_URL } from '../server';
 
 export const Footer = () => {
   return (
@@ -19,7 +20,7 @@ export const Footer = () => {
         </div>
 
         <div className="border border-gray-600 rounded-lg p-6 flex flex-col items-center relative">
-          <img src="../public/logo.png" alt="Logo" width={80} className="absolute -top-6 bg-black px-2" />
+          <img src={`${SERVER_URL}+"../public/logo.png"`} alt="Logo" width={80} className="absolute -top-6 bg-black px-2" />
           <div className="border-t border-gray-500 w-full mt-8 mb-2"></div>
           <h3 className="text-blue-500 font-bold text-lg">DEEP <span className="text-white">NET SOFT</span></h3>
         </div>

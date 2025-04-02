@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const getCategoryTitle = (activeCategory) => {
-  switch(activeCategory) {
-    case 'food':
-      return 'FOOD SPECIALTIES';
-    case 'drinks':
-      return 'BRUNCH COCKTAILS';
-    case 'brunch':
-      return 'BRUNCH SPECIALS';
-    default:
-      return 'MENU';
-  }
-};
-
-export const MenuSection = ({ activeCategory, selectedCategoryId }) => {
+export const MenuSection = ({ 
+  activeCategory, 
+  selectedCategoryId,
+  activeCategoryDescription 
+}) => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -102,10 +93,11 @@ export const MenuSection = ({ activeCategory, selectedCategoryId }) => {
             className="object-contain"
           />
         </div>
-        <h2 className="text-center text-2xl font-bold mb-8 relative">
-          <span className="bg-black px-4">{getCategoryTitle(activeCategory)}</span>
+        <h2 className="text-center text-2xl font-bold mb-2 relative">
+          <span className="bg-black px-4 uppercase">{activeCategoryDescription}</span>
           <div className="absolute w-full h-px bg-white top-1/2 left-0 -z-10"></div>
         </h2>
+        
 
         <div className="space-y-8 m-6">
           {items.length > 0 ? (

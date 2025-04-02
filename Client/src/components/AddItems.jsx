@@ -110,7 +110,7 @@ export default function AddItems() {
   };
 
   const getCategoryIcon = (categoryName) => {
-    const name = categoryName.toLowerCase();
+    const name = categoryName;
     if (name.includes('burger') || name.includes('sandwich')) return <FaHamburger className="text-yellow-600" />;
     if (name.includes('coffee') || name.includes('drink')) return <FaCoffee className="text-brown-600" />;
     if (name.includes('pizza') || name.includes('pasta')) return <FaPizzaSlice className="text-red-500" />;

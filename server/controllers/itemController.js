@@ -5,6 +5,8 @@ const MenuCategory = require("../models/categoryModel");
 const createItem = async (req, res) => {
     try {
         const { name, description, price, category } = req.body;
+        console.log(req.body);
+        
 
         // Ensure category exists
         const categoryExists = await MenuCategory.findById(category);

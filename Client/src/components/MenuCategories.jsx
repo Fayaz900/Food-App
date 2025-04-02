@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { SERVER_URL } from '../server';
 
 export const MenuCategories = ({
   activeCategory,
@@ -16,7 +17,7 @@ export const MenuCategories = ({
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/getAllcategories');
+      const response = await axios.get(`${SERVER_URL}/getAllcategories`);
       setCategories(response.data);
   
       // Set "All" as default

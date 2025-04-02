@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FiPlus, FiRefreshCw, FiChevronRight, FiGrid, FiList } from 'react-icons/fi';
+import { SERVER_URL } from '../server';
 
 export default function AddItems() {
   const [categories, setCategories] = useState([]);
@@ -37,7 +38,7 @@ export default function AddItems() {
   const fetchCategories = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get('http://localhost:3000/api/getAllcategories');
+      const response = await axios.get(`${SERVER_URL}/getAllcategories`);
       setCategories(response.data);
       setError(null);
     } catch (err) {
@@ -51,7 +52,7 @@ export default function AddItems() {
   const fetchItems = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get('http://localhost:3000/api/Getitems');
+      const response = await axios.get(`${SERVER_URL}/Getitems`);
       setItems(response.data);
       setError(null);
     } catch (err) {
@@ -67,7 +68,7 @@ export default function AddItems() {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        'http://localhost:3000/api/Createcategories',
+        `${SERVER_URL}/Createcategories`,
         newCategory
       );
       setCategories([...categories, response.data]);
@@ -86,7 +87,7 @@ export default function AddItems() {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        'http://localhost:3000/api/Createitems',
+        `${SERVER_URL}/Createitems`,
         newItem
       );
       await fetchItems();

@@ -7,9 +7,8 @@ const createItem = async (req, res) => {
         const { name, description, price, category } = req.body;
         console.log(req.body);
         
-
         // Ensure category exists
-        const categoryExists = await MenuCategory.findById(category);
+        const categoryExists = await MenuCategory.findById(category );
         if (!categoryExists) {
             return res.status(404).json({ error: "Category not found" });
         }

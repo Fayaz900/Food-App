@@ -7,7 +7,8 @@ const itemRoutes = require("./routes/itemRoutes");
 
 const app = express();
 app.use(cors({
-  origin:"https://food-app-client.vercel.app/",
+  origin:"https://food-app-client.vercel.app",
+  methods: "GET,POST",
 }));
 
 // Middleware

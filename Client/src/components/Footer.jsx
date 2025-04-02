@@ -20,7 +20,7 @@ export const Footer = () => {
         </div>
 
         <div className="border border-gray-600 rounded-lg p-6 flex flex-col items-center relative">
-          <img src={`${SERVER_URL}+"../public/logo.png"`} alt="Logo" width={80} className="absolute -top-6 bg-black px-2" />
+          <img src='https://i.imghippo.com/files/nUf7157RC.png' alt="Logo" width={80} className="absolute -top-6 bg-black px-2" />
           <div className="border-t border-gray-500 w-full mt-8 mb-2"></div>
           <h3 className="text-blue-500 font-bold text-lg">DEEP <span className="text-white">NET SOFT</span></h3>
         </div>

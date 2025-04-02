@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FiPlus, FiRefreshCw, FiChevronRight, FiGrid, FiList } from 'react-icons/fi';
-import { FaHamburger, FaCoffee, FaPizzaSlice, FaIceCream } from 'react-icons/fa';
 
 export default function AddItems() {
   // State for categories
@@ -107,15 +106,6 @@ export default function AddItems() {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const getCategoryIcon = (categoryName) => {
-    const name = categoryName;
-    if (name.includes('burger') || name.includes('sandwich')) return <FaHamburger className="text-yellow-600" />;
-    if (name.includes('coffee') || name.includes('drink')) return <FaCoffee className="text-brown-600" />;
-    if (name.includes('pizza') || name.includes('pasta')) return <FaPizzaSlice className="text-red-500" />;
-    if (name.includes('dessert') || name.includes('ice cream')) return <FaIceCream className="text-pink-400" />;
-    return <FiGrid className="text-gray-500" />;
   };
 
   return (
@@ -231,7 +221,7 @@ export default function AddItems() {
                 <div key={category._id} className="bg-white rounded-xl shadow-sm p-5 hover:shadow-md transition">
                   <div className="flex items-start">
                     <div className="p-3 bg-blue-50 rounded-lg mr-4">
-                      {getCategoryIcon(category.name)}
+                      
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-gray-800">{category.name}</h3>
@@ -379,7 +369,7 @@ export default function AddItems() {
                       </div>
                       <p className="text-gray-600 text-sm mb-4">{item.description}</p>
                       <div className="flex items-center text-sm text-gray-500">
-                        {getCategoryIcon(categories.find(c => c._id === item.category)?.name || '')}
+                        
                         <span className="ml-2">
                           {categories.find(c => c._id === item.category)?.name || 'Unknown'}
                         </span>
@@ -407,7 +397,7 @@ export default function AddItems() {
                         <div className="flex justify-between items-center">
                           <div className="flex items-center">
                             <div className="p-2 bg-blue-50 rounded-lg mr-4">
-                              {getCategoryIcon(categories.find(c => c._id === item.category)?.name || '')}
+                             
                             </div>
                             <div>
                               <h3 className="font-medium text-gray-800">{item.name}</h3>

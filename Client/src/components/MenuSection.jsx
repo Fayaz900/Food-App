@@ -94,7 +94,7 @@ export const MenuSection = ({
           />
         </div>
         <h2 className="text-center text-2xl font-bold mb-2 relative">
-          <span className="bg-black px-4 uppercase">{activeCategoryDescription}</span>
+          <span className="bg-black px-4 uppercase font-oswald text-shadow-burgundy">{activeCategoryDescription}</span>
           <div className="absolute w-full h-px bg-white top-1/2 left-0 -z-10"></div>
         </h2>
         

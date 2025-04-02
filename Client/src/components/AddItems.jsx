@@ -3,14 +3,11 @@ import axios from 'axios';
 import { FiPlus, FiRefreshCw, FiChevronRight, FiGrid, FiList } from 'react-icons/fi';
 
 export default function AddItems() {
-  // State for categories
   const [categories, setCategories] = useState([]);
   const [newCategory, setNewCategory] = useState({
     name: '',
     description: ''
   });
-
-  // State for items
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState({
     name: '',
@@ -19,11 +16,11 @@ export default function AddItems() {
     category: ''
   });
 
-  // Form states
+
   const [activeTab, setActiveTab] = useState('categories');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
+  const [viewMode, setViewMode] = useState('grid');
 
   // Fetch all categories on component mount
   useEffect(() => {
@@ -368,12 +365,6 @@ export default function AddItems() {
                         <span className="font-bold text-blue-600">${item.price}</span>
                       </div>
                       <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-                      <div className="flex items-center text-sm text-gray-500">
-                        
-                        <span className="ml-2">
-                          {categories.find(c => c._id === item.category)?.name || 'Unknown'}
-                        </span>
-                      </div>
                     </div>
                   ))
                 ) : (

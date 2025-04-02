@@ -115,7 +115,6 @@ export const MenuCategories = ({
               ALL
             </button>
             
-            {/* Then map through regular categories */}
             {categories.map((category) => (
               <button
                 key={category._id}

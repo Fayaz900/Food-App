@@ -3,7 +3,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('home');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -36,7 +36,6 @@ export const Header = () => {
   return (
     <>
       <header className="container mx-auto p-4 flex justify-between items-center bg-black sticky top-0 z-40">
-        {/* Logo - centered on mobile, hides text on mobile */}
         <div className="flex items-center mx-auto md:mx-0">
           <div className="text-blue-500 font-bold flex items-center">
             <img
@@ -45,8 +44,9 @@ export const Header = () => {
               width={40}
               className="object-contain mr-3"
             />
-            <span className="hidden sm:inline">DEEP NET</span>
-            <span className="hidden sm:inline ml-1">SOFT</span>
+            <span className="hidden sm:inline font-oswald">DEEP</span>
+            <span className="hidden sm:inline ml-1 font-oswald text-white">NET</span>
+            <span className="hidden sm:inline ml-1 font-oswald">SOFT</span>
           </div>
         </div>
         
@@ -94,7 +94,6 @@ export const Header = () => {
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button 
           className="md:hidden text-white focus:outline-none absolute right-4"
           onClick={toggleMenu}

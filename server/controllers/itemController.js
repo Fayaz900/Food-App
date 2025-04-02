@@ -24,7 +24,14 @@ const createItem = async (req, res) => {
 // Get all items (with category names)
 const getItems = async (req, res) => {
     try {
-        const items = await MenuItem.find().populate("category", "name");
+        const { category } = req.query;
+        let query = {};
+        
+        if (category) {
+            query.category = category;
+        }
+        
+        const items = await MenuItem.find(query).populate("category", "name");
         res.json(items);
     } catch (error) {
         res.status(500).json({ error: error.message });
